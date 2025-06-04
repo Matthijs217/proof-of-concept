@@ -12,6 +12,7 @@ body {
     --text-color-dark: #212121;
     --bg-color-dark: #41453b;
     --bg-color-light: #ffffff;
+    --margin: 18px;
     font-family: ff-tisa-sans-web-pro, sans-serif;
     overflow-x: hidden;
     font-size: 16px;

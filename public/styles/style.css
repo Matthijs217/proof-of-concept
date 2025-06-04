@@ -42,19 +42,35 @@ nav {
 }
 
 h1 {
-    margin-left: 18px;
-    margin-right: 18px;
+    margin-left: var(--margin);
+    margin-right: var(--margin);
     font-size: 41.8864px;
 }
 
 p {
     font-size: 120%;
     font-weight: 700;
-    margin-left: 18px;
-    margin-right: 18px;
+    margin-left: var(--margin);
+    margin-right: var(--margin);
 }
 
-ul {
+.main-list {
     margin: 0;
     margin-top: 2em;
+}
+
+footer {
+    margin-top: 2em;
+    background-color: #41453b;
+    & div {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        margin-top: 2em;
+        margin-left: var(--margin);
+        margin-right: var(--margin);
+        & ul {
+            list-style-type: none;
+        }
+    }
 }
