@@ -40,3 +40,16 @@ nav {
         width: 53px;
     }
 }
+
+h1 {
+    margin-left: 18px;
+    margin-right: 18px;
+    font-size: 41.8864px;
+}
+
+p {
+    font-size: 120%;
+    font-weight: 700;
+    margin-left: 18px;
+    margin-right: 18px;
+}
