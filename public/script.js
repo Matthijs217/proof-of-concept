@@ -1,0 +1,1 @@
+const API_PEOPLE_ENDPOINT = "/api/people";

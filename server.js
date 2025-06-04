@@ -1,4 +1,8 @@
 import express from 'express'
+import dotenv from "dotenv";
+import { createProxyMiddleware } from "http-proxy-middleware";
+
+dotenv.config();
 
 // Importeer de Liquid package (ook als dependency via npm geïnstalleerd)
 import { Liquid } from 'liquidjs';
@@ -17,13 +21,35 @@ app.use(express.static('public'))
 const engine = new Liquid()
 app.engine('liquid', engine.express())
 
+// api
+app.use(
+  "/api",
+  createProxyMiddleware({
+    target: "https://the-sprint-api.onrender.com",
+    changeOrigin: true,
+    pathRewrite: {
+      "^/api": "",
+    },
+    onProxyReq: (proxyReq, req, res) => {
+      proxyReq.removeHeader("x-api-key");
+      proxyReq.setHeader("x-api-key", process.env.API_KEY);
+    },
+  })
+);
+
+
 // Stel de map met Liquid templates in
 // Let op: de browser kan deze bestanden niet rechtstreeks laden (zoals voorheen met HTML bestanden)
 app.set('views', './views')
 
 app.get('/', async function (request, response) {
 
-  response.render('index.liquid', {});
+  const apiResponse = await fetch(`http://localhost:${app.get('port')}/api/people`);
+  const apiResponseJSON = await apiResponse.json()
+
+
+  console.log(apiResponseJSON)
+  response.render('index.liquid', { mensen: apiResponseJSON });
 })
 
 // Stel het poortnummer in waar Express op moet gaan luisteren
