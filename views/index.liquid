@@ -8,7 +8,8 @@
 <ul>
     {% for mens in mensen %}
     <li>
-        <p>{{ mens.id }}</p>
+        <img src="{{ mens.avatars }}" alt="leden-foto">
+        <p>{{ mens.name }}</p>
     </li>
     {% endfor %}
 </ul>

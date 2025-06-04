@@ -53,3 +53,8 @@ p {
     margin-left: 18px;
     margin-right: 18px;
 }
+
+ul {
+    margin: 0;
+    margin-top: 2em;
+}
