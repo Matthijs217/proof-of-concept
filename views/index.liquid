@@ -5,13 +5,15 @@
 
 <p class="hero-text">Onze mensen noemen we Q'ers. Maar wie zijn dat dan? Die Q'ers die het internet aan het afmaken zijn? Check ze allemaal hieronder. En wil je ook Q'er worden, scroll dan even voorbij onze hoofden voor de openstaande vacatures!</p>
 
-{% comment %}<ul class="main-list">
+<ul class="main-list">
     {% for mens in mensen %}
     <li>
-        <img src="{{ mens.avatars }}" alt="leden-foto">
-        <p>{{ mens.name }}</p>
+        <div class="person-container">
+            <img class="person-foto" src="{{ mens.avatars | first }}" alt="leden-foto">
+            <p class="person-name">{{ mens.name }}</p>
+        </div>
     </li>
     {% endfor %}
-</ul> {% endcomment %}
+</ul>
 
 {% render 'partials/footer.liquid' %}

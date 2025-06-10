@@ -56,8 +56,49 @@ nav {
 }
 
 .main-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    align-items: center;
     margin: 0;
     margin-top: 2em;
+    & li {
+        list-style-type: none;
+        & .person-container {
+            position: relative;
+            height: 100%;
+            width: 100%;
+        }
+        .person-container::after {
+            content: '';    
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            box-shadow: inset 70px -80px 80px 0 rgba(0,0,0,0.7);
+            pointer-events: none;
+        }
+        & .person-foto {
+            position: relative;
+            display: block;
+            height: 100%;
+            width: 90vw;
+            box-shadow: inset 30px -30px 20px 0 rgb(0,0,0);
+        }
+        & .person-name {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            margin-left: 5px;
+            color: var(--text-color-light);
+            font-family: proxima-nova, sans-serif;           
+            font-size: 3em;
+            font-weight: 600;
+            z-index: 999;
+        }
+    }
 }
 
 footer {
