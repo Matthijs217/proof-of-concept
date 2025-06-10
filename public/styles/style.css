@@ -69,6 +69,14 @@ nav {
             position: relative;
             height: 100%;
             width: 100%;
+            &:hover {
+                .person-name {
+                    position: relative;
+                }
+                .person-info {
+                    display: block;
+                }
+            }
         }
         .person-container::after {
             content: '';    
@@ -98,6 +106,10 @@ nav {
             font-weight: 600;
             z-index: 999;
         }
+        & .person-info {
+            display: none;
+        }
+
     }
 }
 

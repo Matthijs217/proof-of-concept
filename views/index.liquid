@@ -11,6 +11,9 @@
         <div class="person-container">
             <img class="person-foto" src="{{ mens.avatars | first }}" alt="leden-foto">
             <p class="person-name">{{ mens.name }}</p>
+            <div class="person-info">
+                <p class="person-tags"> {{ mens.tags }}</p>
+            </div>
         </div>
     </li>
     {% endfor %}
