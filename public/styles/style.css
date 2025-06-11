@@ -187,6 +187,15 @@ footer {
             flex-direction: column;
             gap: 1em;
             margin-bottom: 1em;
+            & ul {
+                display: flex;
+                flex-direction: column;
+                list-style-type: none;
+                & li {
+                    font-size: 1em;
+                    color: var(--main-color);
+                }
+            }
             & a {
                 color: #9dd349;
             }
@@ -213,7 +222,7 @@ footer {
                 color: #9dd349;
             }
         }
-        & ul {
+        & .nav-list {
             margin-top: 3em;
             display: flex;
             flex-direction: column;
