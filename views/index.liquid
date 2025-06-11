@@ -9,7 +9,11 @@
     {% for mens in mensen %}
     <li>
         <div class="person-container">
-            <img class="person-foto" src="{{ mens.avatars | first }}" alt="leden-foto">
+            <picture>
+                <source type="image/avif" srcset="{{ mens.avatars | first }}">
+                <source type="image/webp" srcset="{{ mens.avatars | first }}">
+                <img class="person-foto" src="{{ mens.avatars | first }}" alt="leden-foto" width="288" height="288">
+            </picture>
             <p class="person-name">{{ mens.name }}</p>
             <div class="person-info">
                 <p class="person-tags"> {{ mens.tags }}</p>
