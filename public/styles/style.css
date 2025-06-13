@@ -222,7 +222,7 @@ footer {
                 color: #9dd349;
             }
         }
-        & .nav-list {
+        & .nav-list-footer {
             margin-top: 3em;
             display: flex;
             flex-direction: column;

@@ -1,6 +1,5 @@
 import express from 'express'
 import dotenv from "dotenv";
-import { createProxyMiddleware } from "http-proxy-middleware";
 
 dotenv.config();
 
@@ -21,21 +20,7 @@ app.use(express.static('public'))
 const engine = new Liquid()
 app.engine('liquid', engine.express())
 
-// api
-app.use(
-  "/api",
-  createProxyMiddleware({
-    target: "https://the-sprint-api.onrender.com",
-    changeOrigin: true,
-    pathRewrite: {
-      "^/api": "",
-    },
-    onProxyReq: (proxyReq, req, res) => {
-      proxyReq.removeHeader("x-api-key");
-      proxyReq.setHeader("x-api-key", process.env.API_KEY);
-    },
-  })
-);
+
 
 
 // Stel de map met Liquid templates in
@@ -44,7 +29,11 @@ app.set('views', './views')
 
 app.get('/', async function (request, response) {
 
-  const apiResponse = await fetch(`http://localhost:${app.get('port')}/api/people`);
+  const apiResponse = await fetch(`https://the-sprint-api.onrender.com/api/people`, {
+    headers: {
+      "x-api-key": process.env.API_KEY,
+  },
+  });
   const apiResponseJSON = await apiResponse.json()
 
 
