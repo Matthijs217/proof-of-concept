@@ -29,7 +29,7 @@ app.set('views', './views')
 
 app.get('/', async function (request, response) {
 
-  const apiResponse = await fetch(`https://the-sprint-api.onrender.com/api/people`, {
+  const apiResponse = await fetch(`https://the-sprint-api.onrender.com/people`, {
     headers: {
       "x-api-key": process.env.API_KEY,
   },
