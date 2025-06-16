@@ -14,11 +14,6 @@
                 <source type="image/webp" srcset="{{ mens.avatars | first }}">
                 <img class="person-foto" src="{{ mens.avatars | first }}" alt="leden-foto" width="288" height="288">
             </picture>
-            <picture>
-                <source type="image/avif" srcset="{{ mens.avatars | second }}">
-                <source type="image/webp" srcset="{{ mens.avatars | second }}">
-                <img class="person-foto-second" src="{{ mens.avatars | second }}" alt="leden-foto" width="288" height="288">
-            </picture>
             <p class="person-name">{{ mens.name }}</p>
             <p class="person-email">{{ mens.email }}</p>
             <p class="person-tags"> {{ mens.tags }}</p>
