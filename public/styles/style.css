@@ -170,7 +170,8 @@ header {
 }
 
 .main-list {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     flex-direction: column;
     justify-content: center;
     gap: 1em;
@@ -223,14 +224,6 @@ header {
             display: none;
         }
 
-    }
-    @media (min-width: 600px){
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-    @media (min-width: 1000px){
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 

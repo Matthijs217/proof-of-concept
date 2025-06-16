@@ -20,13 +20,10 @@ app.use(express.static('public'))
 const engine = new Liquid()
 app.engine('liquid', engine.express())
 
-
-
-
 // Stel de map met Liquid templates in
-// Let op: de browser kan deze bestanden niet rechtstreeks laden (zoals voorheen met HTML bestanden)
 app.set('views', './views')
 
+// Main root met gebruik van de API
 app.get('/', async function (request, response) {
 
   const apiResponse = await fetch(`https://the-sprint-api.onrender.com/people`, {
