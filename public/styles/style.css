@@ -195,16 +195,13 @@ header {
                     display: block;
                 }
                 .person-name {
-                    transition: bottom .2s ease-in;
                     bottom: 7vh;
                 }
                 .person-tags {
-                    transition: bottom .2s ease-in;
                     visibility: visible;
                     bottom: 4vh;
                 }  
                 .person-email {
-                    transition: bottom .2s ease-in;
                     visibility: visible;
                     bottom: 2vh;
                 } 
@@ -248,6 +245,7 @@ header {
             font-size: clamp(3rem, 3rem, 6rem);            
             font-weight: 600;
             z-index: 1;
+            transition: bottom .2s ease-in;
         }
 
         & .person-tags {
@@ -260,6 +258,7 @@ header {
             font-family: proxima-nova, sans-serif;
             font-weight: 600;
             z-index: 1;
+            transition: bottom .2s ease-in;
         }
 
         & .person-email {
@@ -272,6 +271,7 @@ header {
             font-family: proxima-nova, sans-serif;
             font-weight: 600;
             z-index: 1;
+            transition: bottom .2s ease-in;
         }
 
         & .person-info {
