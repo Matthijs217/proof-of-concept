@@ -195,19 +195,19 @@ header {
                     display: block;
                 }
                 .person-name {
-                    bottom: 7vh;
+                    bottom: 12vh;
                 }
                 .person-tags {
                     visibility: visible;
-                    bottom: 4vh;
+                    bottom: 7vh;
                 }  
                 .person-email {
                     visibility: visible;
-                    bottom: 2vh;
-                } 
+                    bottom: 3.5vh;
+                }
+                
             }
         }
-
         .person-container::after {
             content: '';
             position: absolute;
@@ -224,7 +224,6 @@ header {
             width: 100%;
             position: relative;
             display: block;
-            box-shadow: inset 30px -30px 20px 0 rgb(0, 0, 0);
         }
 
         & .person-foto-second {
@@ -232,7 +231,6 @@ header {
             height: 100%;
             width: 100%;
             position: relative;
-            box-shadow: inset 30px -30px 20px 0 rgb(0, 0, 0);
         }
 
         & .person-name {
@@ -256,6 +254,7 @@ header {
             margin-left: 5px;
             color: var(--text-color-light);
             font-family: proxima-nova, sans-serif;
+            font-size: clamp(1rem, 4vw, 1.5rem);            
             font-weight: 600;
             z-index: 1;
             transition: bottom .2s ease-in;
@@ -269,6 +268,7 @@ header {
             margin-left: 5px;
             color: var(--text-color-light);
             font-family: proxima-nova, sans-serif;
+            font-size: clamp(1rem, 4vw, 1.5rem);            
             font-weight: 600;
             z-index: 1;
             transition: bottom .2s ease-in;
@@ -304,7 +304,8 @@ footer {
                 flex-direction: column;
                 list-style-type: none;
 
-                & li {
+                & a {
+                    text-decoration: none;
                     font-size: clamp(1rem, 2.5vw, 1.25rem);            
                     color: var(--main-color);
                 }
