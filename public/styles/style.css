@@ -1,6 +1,10 @@
+/* HEADER */
+
 header {
     padding: 36px 18px 46px 18px;
 }
+
+/* HELE NAV */
 
 .nav-list {
     display: flex;
@@ -8,7 +12,7 @@ header {
     gap: 2em;
     align-items: center;
 
-    & .menu-button {
+    & a {
         color: var(--main-color);
         text-decoration: none;
         display: flex;
@@ -58,27 +62,8 @@ header {
     }
 }
 
-.nav-list-header {
-    margin-top: 3em;
-    display: flex;
-    flex-direction: column;
-    gap: 2.7em;
-    height: 50vh;
-    list-style-type: none;
 
-    & li {
-        & a {
-            padding-left: var(--margin);
-            padding-right: var(--margin);
-            font-size: 1em;
-            font-weight: 600;
-            font-family: proxima-nova, sans-serif;
-            color: var(--text-color-light);
-            text-transform: uppercase;
-            text-decoration: none;
-        }
-    }
-}
+/* DIV OM BURGER MENU */
 
 .header-nav-container {
     @media (min-width: 790px) {
@@ -125,6 +110,32 @@ header {
     }
 }
 
+/* BURGER MENU NAV */
+
+.nav-list-header {
+    margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+    gap: 2.7em;
+    height: 50vh;
+    list-style-type: none;
+
+    & li {
+        & a {
+            justify-content: left;
+            padding-left: var(--margin);
+            padding-right: var(--margin);
+            font-size: 1em;
+            font-weight: 600;
+            font-family: proxima-nova, sans-serif;
+            color: var(--text-color-light);
+            text-transform: uppercase;
+        }
+    }
+}
+
+
+/* BURGER MENU SECTION */
 .header-nav {
     z-index: 888;
     position: fixed;
@@ -148,6 +159,7 @@ header {
 
 }
 
+/* HERO */
 .hero-title {
     text-align: center;
     margin-left: var(--margin);
@@ -165,6 +177,7 @@ header {
     margin-right: var(--margin);
 }
 
+/* ALLE FOTOS LOOP */
 .main-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -274,6 +287,8 @@ header {
         }
     }
 }
+
+/* FOOTER */
 
 footer {
     padding-top: 2em;
