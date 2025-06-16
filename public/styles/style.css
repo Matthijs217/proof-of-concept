@@ -8,7 +8,7 @@ header {
     gap: 2em;
     align-items: center;
 
-    & a {
+    & .menu-button {
         color: var(--main-color);
         text-decoration: none;
         display: flex;
@@ -17,9 +17,11 @@ header {
         gap: .25em;
         font-family: proxima-nova, sans-serif;
         font-weight: 600;
-        @media (min-width: 790px){
+
+        @media (min-width: 790px) {
             display: none;
         }
+
         & svg {
             height: 15px;
             width: 15px;
@@ -29,7 +31,8 @@ header {
 
     & .nav-links {
         display: none;
-        @media (min-width: 790px){
+
+        @media (min-width: 790px) {
             display: block;
         }
     }
@@ -47,7 +50,8 @@ header {
         transform: translate(-25%);
         height: 80px;
         width: 53px;
-        @media (min-width: 790px){
+
+        @media (min-width: 790px) {
             transform: translate(-50%);
             transform: translate(0);
         }
@@ -63,24 +67,28 @@ header {
     list-style-type: none;
 
     & li {
-        padding-left: var(--margin);
-        padding-right: var(--margin);
-        font-size: 1em;
-        font-weight: 600;
-        font-family: proxima-nova, sans-serif;
-        color: var(--text-color-light);
-        text-transform: uppercase;
+        & a {
+            padding-left: var(--margin);
+            padding-right: var(--margin);
+            font-size: 1em;
+            font-weight: 600;
+            font-family: proxima-nova, sans-serif;
+            color: var(--text-color-light);
+            text-transform: uppercase;
+            text-decoration: none;
+        }
     }
 }
 
 .header-nav-container {
-    @media (min-width: 790px){
+    @media (min-width: 790px) {
         appearance: none;
         display: none;
         height: 0px;
         width: 0px;
     }
-    & a {
+
+    & .menu-close {
         color: var(--text-color-light);
         font-size: 2em;
         display: none;
@@ -140,18 +148,6 @@ header {
 
 }
 
-.menu-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50vw;
-    height: 100vh;
-    background-color: rgb(255, 255, 255);
-    z-index: 999;
-    display: flex;
-    flex-direction: column;
-}
-
 .hero-title {
     text-align: center;
     margin-left: var(--margin);
@@ -180,6 +176,7 @@ header {
     margin-top: 2em;
     margin-bottom: 2em;
     padding: 1em;
+
     & li {
         list-style-type: none;
 
@@ -187,27 +184,25 @@ header {
             position: relative;
             height: 100%;
             width: 100%;
+
             &:hover {
-                .person-foto {
-                    display: none;
-                }
-                .person-foto-second {
-                    display: block;
-                }
                 .person-name {
                     bottom: 12vh;
                 }
+
                 .person-tags {
                     visibility: visible;
                     bottom: 7vh;
-                }  
+                }
+
                 .person-email {
                     visibility: visible;
                     bottom: 3.5vh;
                 }
-                
+
             }
         }
+
         .person-container::after {
             content: '';
             position: absolute;
@@ -240,7 +235,7 @@ header {
             margin-left: 5px;
             color: var(--text-color-light);
             font-family: proxima-nova, sans-serif;
-            font-size: clamp(3rem, 3rem, 6rem);            
+            font-size: clamp(3rem, 3rem, 6rem);
             font-weight: 600;
             z-index: 1;
             transition: bottom .2s ease-in;
@@ -250,11 +245,11 @@ header {
             visibility: hidden;
             position: absolute;
             left: 0;
-            bottom: 0;
+            bottom: 5%;
             margin-left: 5px;
             color: var(--text-color-light);
             font-family: proxima-nova, sans-serif;
-            font-size: clamp(1rem, 4vw, 1.5rem);            
+            font-size: clamp(1rem, 4vw, 1.5rem);
             font-weight: 600;
             z-index: 1;
             transition: bottom .2s ease-in;
@@ -268,7 +263,7 @@ header {
             margin-left: 5px;
             color: var(--text-color-light);
             font-family: proxima-nova, sans-serif;
-            font-size: clamp(1rem, 4vw, 1.5rem);            
+            font-size: clamp(1rem, 4vw, 1.5rem);
             font-weight: 600;
             z-index: 1;
             transition: bottom .2s ease-in;
@@ -296,9 +291,11 @@ footer {
             flex-direction: column;
             gap: 1em;
             margin-bottom: 1em;
+
             & h2 {
-                font-size: clamp(1.75rem, 4vw, 2.5rem);            
+                font-size: clamp(1.75rem, 4vw, 2.5rem);
             }
+
             & ul {
                 display: flex;
                 flex-direction: column;
@@ -306,7 +303,7 @@ footer {
 
                 & a {
                     text-decoration: none;
-                    font-size: clamp(1rem, 2.5vw, 1.25rem);            
+                    font-size: clamp(1rem, 2.5vw, 1.25rem);
                     color: var(--main-color);
                 }
             }
@@ -321,15 +318,19 @@ footer {
             flex-direction: column;
             gap: 1em;
             margin-bottom: 1em;
+
             & h2 {
-                font-size: clamp(1.75rem, 4vw, 2.5rem);            
+                font-size: clamp(1.75rem, 4vw, 2.5rem);
             }
+
             & section {
                 margin-bottom: 1em;
+
                 & p {
                     max-width: 15em;
                 }
             }
+
             & section:nth-of-type(1) {
                 display: flex;
                 flex-direction: column;
@@ -347,7 +348,8 @@ footer {
                 color: #9dd349;
             }
         }
-        @media (min-width: 600px){
+
+        @media (min-width: 600px) {
             flex-direction: row;
             justify-content: center;
             gap: 5em;
