@@ -187,6 +187,28 @@ header {
             position: relative;
             height: 100%;
             width: 100%;
+            &:hover {
+                .person-foto {
+                    display: none;
+                }
+                .person-foto-second {
+                    display: block;
+                }
+                .person-name {
+                    transition: bottom .2s ease-in;
+                    bottom: 7vh;
+                }
+                .person-tags {
+                    transition: bottom .2s ease-in;
+                    visibility: visible;
+                    bottom: 4vh;
+                }  
+                .person-email {
+                    transition: bottom .2s ease-in;
+                    visibility: visible;
+                    bottom: 2vh;
+                } 
+            }
         }
 
         .person-container::after {
@@ -208,6 +230,14 @@ header {
             box-shadow: inset 30px -30px 20px 0 rgb(0, 0, 0);
         }
 
+        & .person-foto-second {
+            display: none;
+            height: 100%;
+            width: 100%;
+            position: relative;
+            box-shadow: inset 30px -30px 20px 0 rgb(0, 0, 0);
+        }
+
         & .person-name {
             position: absolute;
             left: 0;
@@ -220,10 +250,33 @@ header {
             z-index: 1;
         }
 
+        & .person-tags {
+            visibility: hidden;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            margin-left: 5px;
+            color: var(--text-color-light);
+            font-family: proxima-nova, sans-serif;
+            font-weight: 600;
+            z-index: 1;
+        }
+
+        & .person-email {
+            visibility: hidden;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            margin-left: 5px;
+            color: var(--text-color-light);
+            font-family: proxima-nova, sans-serif;
+            font-weight: 600;
+            z-index: 1;
+        }
+
         & .person-info {
             display: none;
         }
-
     }
 }
 
