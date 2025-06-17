@@ -33,18 +33,60 @@ app.get('/', async function (request, response) {
   });
   const apiResponseJSON = await apiResponse.json()
 
+  const messagesResponse = await fetch('https://fdnd.directus.app/items/messages')
+  const messagesData = await messagesResponse.json()
+
+  for (const mens of apiResponseJSON) {
+    const message = messagesData.data.find(msg => msg.for === `Mens ${mens.id}`)
+    if (message && !isNaN(parseInt(message.from))) {
+      mens.likes = parseInt(message.from)
+    } else {
+      mens.likes = 0
+    }
+  }
+
+
   response.render('index.liquid', { mensen: apiResponseJSON });
 })
 
 app.post('/like/:id', async function (request, response) {
-  console.log(action)
-  console.log(request.params.id)
+  const personId = request.params.id;
 
-  if (request.body.like){
-      console.log(`liked person ${personId}`)
-  } else if (request.body.unlike) {
-      console.log(`unliked person ${personId}`)
-  }
+  const url = `https://fdnd.directus.app/items/messages?filter={"for":"Mens ${personId}"}`
+  const messageResponse = await fetch(url)
+  const messageResponseJSON = await messageResponse.json()
+
+  if(messageResponseJSON.data.length > 0) {
+    const likes = parseInt(messageResponseJSON.data[0].from || '1');
+    const newLikes = likes + 1;
+    console.log('patched')
+
+    await fetch(`https://fdnd.directus.app/items/messages/${messageResponseJSON.data[0].id}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json;charset=UTF-8'
+      },
+      body: JSON.stringify({
+        from: newLikes,
+      }),
+    })
+  } else { 
+            console.log('post')
+ 
+    await fetch('https://fdnd.directus.app/items/messages', {
+      method: 'POST',
+      body: JSON.stringify({
+        for: `Mens ${personId}`,
+        from: 1
+      }),
+      headers: {
+        'Content-Type': 'application/json;charset=UTF-8'
+      }
+    });
+  } 
+
+  console.log(`👍 liked person ${personId}`)
+  
   response.redirect(303, '/')
 });
 

@@ -17,11 +17,12 @@
             <p class="person-name">{{ mens.name }}</p>
             <p class="person-email">{{ mens.email }}</p>
             <p class="person-tags"> {{ mens.tags }}</p>
+            <p class="person-likes"> {{ mens.likes }}</p>
             <form method="POST" action="/like/{{ mens.id }}">
             {% if liked %}
-                <button type="submit" name="action" value="unlike">Unlike</button>
+                <button type="submit" name="action" value="unlike">💔</button>
             {% else %}
-                <button type="submit" name="action" value="like">Like</button>
+                <button type="submit" name="action" value="like">❤️</button>
             {% endif %}
             </form>
         </div>
