@@ -38,6 +38,9 @@ app.get('/', async function (request, response) {
 
 app.post('/like/:id', async function (request, response) {
   const personId = request.params.id
+  const action = request.body.action;
+  console.log(action)
+  // console.log(unlike)
   console.log(request.params.id)
 
   if (request.body.like){
