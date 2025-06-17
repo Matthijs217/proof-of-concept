@@ -33,9 +33,18 @@ app.get('/', async function (request, response) {
   });
   const apiResponseJSON = await apiResponse.json()
 
-
-  console.log(apiResponseJSON)
   response.render('index.liquid', { mensen: apiResponseJSON });
+})
+
+app.post('/like/:id', async function (request, response) {
+  const personId = request.params.id
+  console.log(request.params.id)
+
+  if (request.body.like){
+      console.log("liked person ${personId}")
+  } else if (request.body.unlike) {
+      console.log("unliked")
+  }
 })
 
 // Stel het poortnummer in waar Express op moet gaan luisteren
