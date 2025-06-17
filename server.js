@@ -37,10 +37,7 @@ app.get('/', async function (request, response) {
 })
 
 app.post('/like/:id', async function (request, response) {
-  const personId = request.params.id
-  const action = request.body.action;
   console.log(action)
-  // console.log(unlike)
   console.log(request.params.id)
 
   if (request.body.like){
@@ -48,7 +45,8 @@ app.post('/like/:id', async function (request, response) {
   } else if (request.body.unlike) {
       console.log("unliked")
   }
-})
+  response.redirect(303, '/')
+});
 
 // Stel het poortnummer in waar Express op moet gaan luisteren
 // Lokaal is dit poort 8000; als deze applicatie ergens gehost wordt, waarschijnlijk poort 80
