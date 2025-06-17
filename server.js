@@ -43,7 +43,7 @@ app.post('/like/:id', async function (request, response) {
   if (request.body.like){
       console.log(`liked person ${personId}`)
   } else if (request.body.unlike) {
-      console.log("unliked")
+      console.log(`unliked person ${personId}`)
   }
   response.redirect(303, '/')
 });
