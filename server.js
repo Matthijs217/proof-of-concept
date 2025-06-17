@@ -33,14 +33,17 @@ app.get('/', async function (request, response) {
   });
   const apiResponseJSON = await apiResponse.json()
 
-  const messagesResponse = await fetch('https://fdnd.directus.app/items/messages')
-  const messagesData = await messagesResponse.json()
-
+  
   for (const mens of apiResponseJSON) {
+    const messagesResponse = await fetch(`https://fdnd.directus.app/items/messages?filter={"for":"Mens ${mens.id}"}`)
+    const messagesData = await messagesResponse.json()
     const message = messagesData.data.find(msg => msg.for === `Mens ${mens.id}`)
     if (message && !isNaN(parseInt(message.from))) {
+          console.log('parseint')
       mens.likes = parseInt(message.from)
     } else {
+                console.log('mens.likes = 0')
+
       mens.likes = 0
     }
   }

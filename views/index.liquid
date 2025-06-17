@@ -16,7 +16,7 @@
             </picture>
             <p class="person-name">{{ mens.name }}</p>
             <p class="person-email">{{ mens.email }}</p>
-            <p class="person-tags"> {{ mens.tags }}</p>
+            <p class="person-tags"> {{ mens.tags | first }}</p>
             <p class="person-likes"> {{ mens.likes }}</p>
             <form method="POST" action="/like/{{ mens.id }}">
             {% if liked %}
