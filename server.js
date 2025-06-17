@@ -41,7 +41,7 @@ app.post('/like/:id', async function (request, response) {
   console.log(request.params.id)
 
   if (request.body.like){
-      console.log("liked person ${personId}")
+      console.log(`liked person ${personId}`)
   } else if (request.body.unlike) {
       console.log("unliked")
   }

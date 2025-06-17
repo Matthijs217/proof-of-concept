@@ -17,8 +17,8 @@
             <p class="person-name">{{ mens.name }}</p>
             <p class="person-email">{{ mens.email }}</p>
             <p class="person-tags"> {{ mens.tags }}</p>
-            {% if liked %}
             <form method="POST" action="/like/{{ mens.id }}">
+            {% if liked %}
                 <button type="submit" name="unlike" value="unlike">Unlike</button>
             {% else %}
                 <button type="submit" name="like" value="like">Like</button>
