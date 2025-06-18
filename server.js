@@ -5,7 +5,6 @@ dotenv.config();
 
 // Importeer de Liquid package (ook als dependency via npm geïnstalleerd)
 import { Liquid } from 'liquidjs';
-import render from 'liquidjs/dist/tags/render';
 
 // Maak een nieuwe Express applicatie aan, waarin we de server configureren
 const app = express()

@@ -12,7 +12,7 @@
             <picture>
                 <source type="image/avif" srcset="{{ mens.avatars | first }}">
                 <source type="image/webp" srcset="{{ mens.avatars | first }}">
-                <img class="person-foto" src="{{ mens.avatars | first }}" alt="leden-foto" width="288" height="288">
+                <img class="person-foto" src="{{ mens.avatars | first }}" alt="foto van {{ mens.name }}" width="288" height="288">
             </picture>
             <p class="person-name">{{ mens.name }}</p>
             <p class="person-email">{{ mens.email }}</p>
@@ -29,8 +29,6 @@
 
 <script type="module">
 
-  // Als er ergens op de pagina een formulier wordt gesubmit..
-  // (We maken hier gebruik van Event Delegation)
   document.addEventListener('submit', async function(event) {
 
 

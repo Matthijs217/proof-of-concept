@@ -239,13 +239,6 @@ header {
             display: block;
         }
 
-        & .person-foto-second {
-            display: none;
-            height: 100%;
-            width: 100%;
-            position: relative;
-        }
-
         & .person-name {
             position: absolute;
             left: 0;
