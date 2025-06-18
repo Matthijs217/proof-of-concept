@@ -39,7 +39,6 @@ app.get('/', async function (request, response) {
     const messagesData = await messagesResponse.json()
     const message = messagesData.data.find(msg => msg.for === `Mens ${mens.id}`)
     if (message && !isNaN(parseInt(message.from))) {
-          console.log('parseint')
       mens.likes = parseInt(message.from)
     } else {
                 console.log('mens.likes = 0')
