@@ -172,7 +172,7 @@ header {
 .hero-text {
     text-align: center;
     justify-self: center;
-    max-width: 85vw;
+    max-width: 65vw;
     font-size: 120%;
     font-weight: 700;
     margin-left: var(--margin);
@@ -181,6 +181,8 @@ header {
 
 /* ALLE FOTOS LOOP */
 .main-list {
+    max-width: 75vw;
+    justify-self: center;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     flex-direction: column;
@@ -203,16 +205,19 @@ header {
             &:hover {
                 .person-name {
                     bottom: 12vh;
+                    transition-delay: 0s;
                 }
 
                 .person-tags {
                     visibility: visible;
                     bottom: 7vh;
+                    transition-delay: .05s;
                 }
 
                 .person-email {
                     visibility: visible;
                     bottom: 3.5vh;
+                    transition-delay: .1s;
                 }
                 
                 .like-btn {
@@ -249,7 +254,7 @@ header {
             font-size: clamp(3rem, 3rem, 6rem);
             font-weight: 600;
             z-index: 1;
-            transition: bottom .2s ease-in;
+            transition: bottom .1s ease-in;
         }
 
         & .person-tags {
@@ -263,7 +268,7 @@ header {
             font-size: clamp(1rem, 4vw, 1.5rem);
             font-weight: 600;
             z-index: 1;
-            transition: bottom .2s ease-in;
+            transition: bottom .1s ease-in;
         }
 
         & .person-email {
@@ -277,7 +282,7 @@ header {
             font-size: clamp(1rem, 4vw, 1.5rem);
             font-weight: 600;
             z-index: 1;
-            transition: bottom .2s ease-in;
+            transition: bottom .1s ease-in;
         }
         
         & .like-btn {

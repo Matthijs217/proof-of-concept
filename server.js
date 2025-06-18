@@ -32,7 +32,6 @@ app.get('/', async function (request, response) {
   },
   });
   const apiResponseJSON = await apiResponse.json()
-
   
   for (const mens of apiResponseJSON) {
     const messagesResponse = await fetch(`https://fdnd.directus.app/items/messages?filter={"for":"Mens ${mens.id}"}`)
