@@ -283,9 +283,27 @@ header {
             z-index: 1;
             transition: bottom .2s ease-in;
         }
-
-        & .person-info {
-            display: none;
+        
+        & .like-btn {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: 2;
+            appearance: none;
+            border: none;
+            background-color: transparent;
+            font-size: 2rem;
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.2);
+            }
+            & .person-likes {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 1rem;
+            }
         }
     }
 }
