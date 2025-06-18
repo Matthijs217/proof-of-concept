@@ -5,6 +5,12 @@ De instructies voor deze opdracht staan in: [docs/INSTRUCTIONS.md](https://githu
 # Titel
 <!-- Geef je project een titel en schrijf in één zin wat het is -->
 
+## Inleiding
+
+Ik heb een responsive, mobile first en dynamische pagina voor Q42 gemaakt, dit is een pagina om de mensen bij Q42 te tonen op een leuke manier. De mensen hebben allemaal een like knop die optelt!
+
+bekijk de live site hier! https://proof-of-concept-1plt.onrender.com/
+
 ## Inhoudsopgave
 
   * [Beschrijving](#beschrijving)
@@ -18,17 +24,55 @@ De instructies voor deze opdracht staan in: [docs/INSTRUCTIONS.md](https://githu
 <!-- Bij Beschrijving staat kort beschreven wat voor project het is en wat je hebt gemaakt -->
 <!-- Voeg een mooie poster visual toe 📸 -->
 <!-- Voeg een link toe naar Github Pages 🌐-->
+#### 1 & 2 – Functional & Reliable
+- De paginatie werkt via een server-side, waardoor de pagina ook zonder client-side JavaScript en CSS volledig functioneel blijft. 
+- De HTML is semantisch correct opgebouwd, zodat die op meerdere browsers goed werkt en zelfs toegankelijkheid dingetjes erbij krijgt.
+- Met liquid worden de mensen uit de Q42 database opgehaald en getoond. Via de server kan je de mensen liken!
 
-## Gebruik
-<!-- Bij Gebruik staat de user story, hoe het werkt en wat je er mee kan. -->
+#### 3 – Usable  
+- De pagina is mobile first en helemaal responsive. Dit betekent dat die vanaf elk device kan worden gezien en hoe grotet het device word het nog steeds werkt.
+- De pagina is helemaal toegankelijk, wat betekent dat je met je toetsenbord ook de hele pagina zou kunnen bekijken en besturen.
+
+#### 4 – Pleasurable  
+
+- Hover animatie op de header
+- Hover animatie op de mobile menu navigatie
+- Hover animatie op de mensen van Q42
+- Een mooie loading state als je het like knopje inklikt wat een heartbeat simuleert.
 
 ## Kenmerken
-<!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? Misschien heb je iets met NodeJS gedaan, of heb je een framwork of library gebruikt? -->
+
+Voor dit project is gebruik gemaakt van Node.js en Express om een webserver te bouwen. De HTML-pagina’s worden gegenereerd met Liquid, een template-engine waarmee je makkelijk dynamische content kunt tonen.
+
+## Routes
+
+- 'get /' route die de index.liquid toont (hoofdpagina)
+- 'post /like/:id' route die zorgt voor de afhandeling van de like op de mensen
+
+### Gebruikte tools
+
+- **Express.js** – server en routing  
+- **LiquidJS** – templates renderen  
+- **Directus API** – formulierdata opslaan  
+- **Fetch API** – data ophalen in routes
+
 
 ## Installatie
-<!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
+
+Om het project lokaal te gebruiken heb je Node.js nodig. Daarna kun je het project openen in een code-editor.
+
+1. Installeer de benodigde pakketten:
+   ```bash
+   npm install
+2. Start de server:
+   ```bash
+   npm start
+3. Bekijk het project in je browser via:
+   ```bash
+   http://localhost:8000
 
 ## Bronnen
+- Website van [Q42](https://www.q42.nl/q-ers)
 
 ## Licentie
 
