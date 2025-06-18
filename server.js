@@ -5,6 +5,7 @@ dotenv.config();
 
 // Importeer de Liquid package (ook als dependency via npm geïnstalleerd)
 import { Liquid } from 'liquidjs';
+import render from 'liquidjs/dist/tags/render';
 
 // Maak een nieuwe Express applicatie aan, waarin we de server configureren
 const app = express()
@@ -57,8 +58,8 @@ app.post('/like/:id', async function (request, response) {
   const messageResponseJSON = await messageResponse.json()
 
   if(messageResponseJSON.data.length > 0) {
-    const likes = parseInt(messageResponseJSON.data[0].from || '1');
-    const newLikes = likes + 1;
+    let likes = parseInt(messageResponseJSON.data[0].from || '0');
+    let newLikes = likes + 1;
 
     await fetch(`https://fdnd.directus.app/items/messages/${messageResponseJSON.data[0].id}`, {
       method: 'PATCH',
@@ -84,7 +85,14 @@ app.post('/like/:id', async function (request, response) {
   } 
 
   console.log(`liked person ${personId}`)
-  
+  // Als deze fetch door client-side JS werd gedaan..
+  // if (request.query.enhanced)
+  // if (request.query.enhanced){
+  //   response.render('partials/mens.liquid')
+  // }
+  // Render dan die mens.liquid partial..
+  // Anders
+  // Redirect naar de homepage
   response.redirect(303, '/')
 });
 

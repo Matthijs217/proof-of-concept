@@ -310,8 +310,16 @@ header {
                 font-weight: 600;
                 color: #222;
             }
+            
+        }
+        .loading {
+            animation: spin .8s linear infinite;
         }
     }
+}
+
+@keyframes spin {
+	to { transform: scale(1.6); }
 }
 
 /* FOOTER */
