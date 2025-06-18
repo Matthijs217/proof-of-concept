@@ -59,6 +59,7 @@ app.post('/like/:id', async function (request, response) {
   if(messageResponseJSON.data.length > 0) {
     const likes = parseInt(messageResponseJSON.data[0].from || '1');
     const newLikes = likes + 1;
+
     await fetch(`https://fdnd.directus.app/items/messages/${messageResponseJSON.data[0].id}`, {
       method: 'PATCH',
       headers: {
@@ -68,6 +69,7 @@ app.post('/like/:id', async function (request, response) {
         from: newLikes,
       }),
     })
+
   } else {  
     await fetch('https://fdnd.directus.app/items/messages', {
       method: 'POST',
