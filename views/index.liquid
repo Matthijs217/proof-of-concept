@@ -77,7 +77,7 @@
     // We gebruiken hiervoor het eerdere data-enhanced attribuut, zodat we weten waar we naar moeten zoeken
     // In de nieuwe HTML zoeken we bijvoorbeeld naar data-enhanced="true" of data-enhanced="formulier-3"
     // (Hierdoor kunnen we ook meerdere formulieren op dezelfde pagina gebruiken)
-    const newState = responseDOM.querySelector('[data-enhanced="' + form.getAttribute('data-enhanced') + '"]')
+    const newState = responseDOM.querySelector('.like-btn')
 
     // Overschrijf ons formulier met de nieuwe HTML
     // Hier wil je waarschijnlijk de Loading state vervangen door een Success state
