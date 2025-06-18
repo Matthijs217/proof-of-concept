@@ -8,7 +8,7 @@
 <ul class="main-list">
     {% for mens in mensen %}
     <li>
-        <div class="person-container">
+        <div class="person-container" tabindex="0">
             <picture>
                 <source type="image/avif" srcset="{{ mens.avatars | first }}">
                 <source type="image/webp" srcset="{{ mens.avatars | first }}">
