@@ -41,8 +41,6 @@ app.get('/', async function (request, response) {
     if (message && !isNaN(parseInt(message.from))) {
       mens.likes = parseInt(message.from)
     } else {
-                console.log('mens.likes = 0')
-
       mens.likes = 0
     }
   }
@@ -61,8 +59,6 @@ app.post('/like/:id', async function (request, response) {
   if(messageResponseJSON.data.length > 0) {
     const likes = parseInt(messageResponseJSON.data[0].from || '1');
     const newLikes = likes + 1;
-    console.log('patched')
-
     await fetch(`https://fdnd.directus.app/items/messages/${messageResponseJSON.data[0].id}`, {
       method: 'PATCH',
       headers: {
@@ -72,9 +68,7 @@ app.post('/like/:id', async function (request, response) {
         from: newLikes,
       }),
     })
-  } else { 
-            console.log('post')
- 
+  } else {  
     await fetch('https://fdnd.directus.app/items/messages', {
       method: 'POST',
       body: JSON.stringify({
@@ -87,7 +81,7 @@ app.post('/like/:id', async function (request, response) {
     });
   } 
 
-  console.log(`👍 liked person ${personId}`)
+  console.log(`liked person ${personId}`)
   
   response.redirect(303, '/')
 });

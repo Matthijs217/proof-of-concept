@@ -35,7 +35,9 @@ header {
 
     & .nav-links {
         display: none;
-
+        &:hover {
+            transform: scale(1.15);
+        }
         @media (min-width: 790px) {
             display: block;
         }
