@@ -11,6 +11,11 @@ Ik heb een responsive, mobile first en dynamische pagina voor Q42 gemaakt, dit i
 
 bekijk de live site hier! https://proof-of-concept-1plt.onrender.com/
 
+<img src="https://github.com/user-attachments/assets/0b7202ed-6892-4f93-b248-930a02b7ea00" width="288">
+<img src="https://github.com/user-attachments/assets/65b8a827-3ff1-4a16-bfcf-9eb09d336cd1" width="288">
+<img src="https://github.com/user-attachments/assets/df5693a1-b82e-4c06-a0ff-af6df04682bc" width="288">
+
+
 ## Inhoudsopgave
 
   * [Beschrijving](#beschrijving)
