@@ -11,9 +11,11 @@
         justify-content: center;
         gap: 2em;
         align-items: center;
-        @media (min-width: 750px){
+
+        @media (min-width: 750px) {
             gap: 3em;
         }
+
         & a {
             color: var(--main-color);
             text-decoration: none;
@@ -37,9 +39,11 @@
 
         & .nav-links {
             display: none;
+
             &:hover {
                 transform: scale(1.15);
             }
+
             @media (min-width: 750px) {
                 display: block;
             }
@@ -179,7 +183,8 @@
         font-weight: 700;
         margin-left: var(--margin);
         margin-right: var(--margin);
-        @media (min-width: 600px){
+
+        @media (min-width: 600px) {
             max-width: 70vw;
         }
     }
@@ -225,7 +230,7 @@
                         bottom: 3.5vh;
                         transition-delay: .1s;
                     }
-                    
+
                     .like-btn {
                         opacity: 1;
                         pointer-events: auto;
@@ -291,7 +296,7 @@
                 z-index: 1;
                 transition: bottom .1s ease-in;
             }
-            
+
             & .like-btn {
                 opacity: 0;
                 position: absolute;
@@ -304,11 +309,13 @@
                 font-size: 2.5rem;
                 pointer-events: none;
                 transition: opacity 0.2s ease-in;
+
                 &:hover,
                 &:focus {
                     cursor: pointer;
                     transform: scale(1.2);
                 }
+
                 & .person-likes {
                     position: absolute;
                     top: 50%;
@@ -318,8 +325,9 @@
                     font-weight: 600;
                     color: #222;
                 }
-                
+
             }
+
             .loading {
                 animation: spin .8s linear infinite;
             }
@@ -327,7 +335,9 @@
     }
 
     @keyframes spin {
-        to { transform: scale(1.6); }
+        to {
+            transform: scale(1.6);
+        }
     }
 
     /* FOOTER */
@@ -406,11 +416,21 @@
                 }
             }
 
-            @media (min-width: 600px) {
+        @media (min-width: 600px) {
                 flex-direction: row;
                 justify-content: center;
                 gap: 5em;
                 border-top: 1px solid #757c6a;
+                justify-self: center;
             }
         }
+        @media (min-width: 600px) {
+            padding-top: 5em;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 50% 50% 0 0;
+            width: 200vw;
+        }
+
     }
