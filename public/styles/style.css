@@ -292,7 +292,7 @@ header {
             appearance: none;
             border: none;
             background-color: transparent;
-            font-size: 2rem;
+            font-size: 2.5rem;
             &:hover {
                 cursor: pointer;
                 transform: scale(1.2);
@@ -303,6 +303,8 @@ header {
                 left: 50%;
                 transform: translate(-50%, -50%);
                 font-size: 1rem;
+                font-weight: 600;
+                color: white;
             }
         }
     }
