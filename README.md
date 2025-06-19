@@ -31,12 +31,12 @@ bekijk de live site hier! https://proof-of-concept-1plt.onrender.com/
 <!-- Voeg een link toe naar Github Pages 🌐-->
 #### 1 & 2 – Functional & Reliable
 - De paginatie werkt via een server-side, waardoor de pagina ook zonder client-side JavaScript en CSS volledig functioneel blijft. 
-- De HTML is semantisch correct opgebouwd, zodat die op meerdere browsers goed werkt en zelfs toegankelijkheid dingetjes erbij krijgt.
+- De HTML is semantisch correct opgebouwd, zodat die op meerdere browsers goed werkt en zelfs toegankelijkheid extra'tjes erbij krijgt.
 - Met liquid worden de mensen uit de Q42 database opgehaald en getoond. Via de server kan je de mensen liken!
 
 #### 3 – Usable  
 - De pagina is mobile first en helemaal responsive. Dit betekent dat die vanaf elk device kan worden gezien en hoe grotet het device word het nog steeds werkt.
-- De pagina is helemaal toegankelijk, wat betekent dat je met je toetsenbord ook de hele pagina zou kunnen bekijken en besturen.
+- De pagina is helemaal toegankelijk, wat betekent dat je met je toetsenbord ook de hele pagina zou kunnen bekijken en besturen (waaronder de like button)
 
 #### 4 – Pleasurable  
 
