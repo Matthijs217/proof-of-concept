@@ -59,7 +59,8 @@ Bijvoorbeeld de grid van de mensen van Q42, worden steeds meer colommen als het 
 
 Bijvoorbeeld de hover op de mensen:
 
-Uploading Schermopname 2025-06-19 om 10.15.47.mov…
+Uploading Schermopname 2025-06-19 om 10.50.28.mov…
+
 
 
 ## Kenmerken
