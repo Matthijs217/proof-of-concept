@@ -59,13 +59,11 @@ Bijvoorbeeld de grid van de mensen van Q42, worden steeds meer colommen als het 
 
 Bijvoorbeeld de hover op de mensen:
 
-Uploading Schermopname 2025-06-19 om 10.50.28.mov…
-
-
+https://github.com/user-attachments/assets/a740eb1f-4a2c-4863-9371-1459f6ed496a
 
 ## Kenmerken
 
-Tijdens het project is er gewerkt met de techniek 'De hierarchy of user needs'. Door deze strategie te gebruiken wordt er gedacht aan progressive enhancement. Wat ervoor zorgt dat de site op elk moment goed werkt. Ook als iemand geen javascript heeft.
+Tijdens het project is er gewerkt met de techniek 'De hierarchy of user needs'. Door deze strategie te gebruiken wordt er gedacht aan progressive enhancement. Wat ervoor zorgt dat de site op elk moment goed werkt. Ook als iemand geen javascript heeft, bijvoorbeeld het mobile menu werkt gewoon nog dan.
 
 Voor dit project is gebruik gemaakt van Node.js en Express om een webserver te bouwen. De HTML-pagina’s worden gegenereerd met Liquid, een template-engine waarmee je makkelijk dynamische content kunt tonen.
 
@@ -81,6 +79,13 @@ Voor dit project is gebruik gemaakt van Node.js en Express om een webserver te b
 - **Directus API** – formulierdata opslaan  
 - **Fetch API** – data ophalen in routes
 
+## Ontwerpkeuzes
+
+Voor de ontwerpkeuzes heb ik de huisstijl gevolgt van Q42. Deze kan je vinden in [hun eigen gemaakte repo](https://github.com/MarvinMichel/the-sprint). Hier is een huisstijl stylesheet en daarnaast volg ik [de mensen pagina van Q42](https://www.q42.nl/q-ers).
+
+Waar ik ook het logo vandaan heb:
+
+<img width="338" alt="Scherm­afbeelding 2025-06-19 om 12 16 49" src="https://github.com/user-attachments/assets/3c3a034f-2a56-453d-b225-0060a72ff9bd" />
 
 ## Installatie
 
