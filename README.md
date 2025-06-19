@@ -34,9 +34,19 @@ bekijk de live site hier! https://proof-of-concept-1plt.onrender.com/
 - De HTML is semantisch correct opgebouwd, zodat die op meerdere browsers goed werkt en zelfs toegankelijkheid extra'tjes erbij krijgt.
 - Met liquid worden de mensen uit de Q42 database opgehaald en getoond. Via de server kan je de mensen liken!
 
+Als iemand bijvoorbeeld javascript heeft uitstaan dan linkt het mobile menu knop gelijk door naar de footer, waar dan de navigatie word getoond.
+Als javascript dan weer aanstaat opent het menu met CSS. 
+<img width="248" alt="Scherm­afbeelding 2025-06-19 om 10 13 09" src="https://github.com/user-attachments/assets/20cb0c18-996a-44e6-b00b-c6a9e105b397" />
+<img width="243" alt="Scherm­afbeelding 2025-06-19 om 10 13 19" src="https://github.com/user-attachments/assets/a7b8b4b5-ed0d-4e75-930a-4ebd2b01a371" />
+
 #### 3 – Usable  
 - De pagina is mobile first en helemaal responsive. Dit betekent dat die vanaf elk device kan worden gezien en hoe grotet het device word het nog steeds werkt.
 - De pagina is helemaal toegankelijk, wat betekent dat je met je toetsenbord ook de hele pagina zou kunnen bekijken en besturen (waaronder de like button)
+
+Bijvoorbeeld de grid van de mensen van Q42, worden steeds meer colommen als het scherm breden word.
+<img width="538" alt="Scherm­afbeelding 2025-06-19 om 10 15 10" src="https://github.com/user-attachments/assets/8157038c-5d9d-48f6-b389-1efdc5dcaf7f" />
+<img width="585" alt="Scherm­afbeelding 2025-06-19 om 10 15 19" src="https://github.com/user-attachments/assets/6723598f-2a76-49e6-b47f-a8baf9039aef" />
+
 
 #### 4 – Pleasurable  
 
@@ -45,7 +55,14 @@ bekijk de live site hier! https://proof-of-concept-1plt.onrender.com/
 - Hover animatie op de mensen van Q42
 - Een mooie loading state als je het like knopje inklikt wat een heartbeat simuleert.
 
+Bijvoorbeeld de hover op de mensen:
+
+Uploading Schermopname 2025-06-19 om 10.15.47.mov…
+
+
 ## Kenmerken
+
+Tijdens het project is er gewerkt met de techniek 'De hierarchy of user needs'. Door deze strategie te gebruiken wordt er gedacht aan progressive enhancement. Wat ervoor zorgt dat de site op elk moment goed werkt. Ook als iemand geen javascript heeft.
 
 Voor dit project is gebruik gemaakt van Node.js en Express om een webserver te bouwen. De HTML-pagina’s worden gegenereerd met Liquid, een template-engine waarmee je makkelijk dynamische content kunt tonen.
 
