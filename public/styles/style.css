@@ -214,6 +214,12 @@
 
                 &:hover,
                 &:focus-within {
+                    .person-foto {
+                        display: none;
+                    }
+                    .person-foto-second {
+                        display: block;
+                    }
                     .person-name {
                         bottom: 12vh;
                         transition-delay: 0s;
@@ -254,6 +260,13 @@
                 width: 100%;
                 position: relative;
                 display: block;
+            }
+
+            & .person-foto-second {
+                height: 100%;
+                width: 100%;
+                position: relative;
+                display: none;
             }
 
             & .person-name {

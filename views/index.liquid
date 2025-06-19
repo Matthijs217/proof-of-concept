@@ -14,6 +14,11 @@
                 <source type="image/webp" srcset="{{ mens.avatars | first }}">
                 <img class="person-foto" src="{{ mens.avatars | first }}" alt="foto van {{ mens.name }}" width="288" height="288">
             </picture>
+            <picture>
+                <source type="image/avif" srcset="{{ mens.avatars[1] }}">
+                <source type="image/webp" srcset="{{ mens.avatars[1] }}">
+                <img class="person-foto-second" src="{% if mens.avatars[1] %}{{ mens.avatars[1] }}{% else %}{{ mens.avatars[0] }}{% endif %}" alt="{{ mens.name }}" width="288" height="288">
+            </picture>
             <p class="person-name">{{ mens.name }}</p>
             <p class="person-email">{{ mens.email }}</p>
             <p class="person-tags"> {{ mens.tags | first }}</p>
